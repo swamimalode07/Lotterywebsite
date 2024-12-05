@@ -1,0 +1,166 @@
+/* Lottery.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .win-message {
+    color: #4caf50;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: pop-in 1s ease-out;
+  }
+  
+  .lose-message {
+    color: #f44336;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  button {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover {
+    background: #1e88e5;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
+  
+  .trophy {
+    position: fixed;
+    top: -50px;
+    font-size: 2.5rem;
+    color: #ffd700;
+    animation: fall linear 5s infinite;
+    z-index: 10;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -50px;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .card {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .card h1, .card h2 {
+    color: #333;
+  }
+  
+  .card button {
+    margin: 15px 10px;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pop-in {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    .trophy {
+      font-size: 2rem;
+    }
+    .win-message, .lose-message {
+      font-size: 1.2rem;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
